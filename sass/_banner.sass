@@ -1,0 +1,44 @@
+.banner
+    &-img
+        background-color: $color-blue-dark
+        grid-column: full-start / col-end 4
+        display: grid
+        grid-template-columns: repeat(16, 1fr)
+        grid-template-rows: repeat(24, 1fr)
+        background: url(../img/background.webp) center / cover no-repeat
+        @include respond(tab-port)
+            grid-column: 1 / -1
+        &__img-1
+            width: 100%
+            grid-column: 2 / 14
+            grid-row: 3 / 12
+            @include respond(tab-port)
+                grid-column: 2 / 8
+                grid-row: 4 / 18
+                border-radius: 2%
+        &__img-2
+            width: 100%
+            grid-column: 4 / 16
+            grid-row: 10 / 22
+            @include respond(tab-port)
+                grid-column: 10 / 16
+                grid-row: 4 / 18
+                border-radius: 2%
+    &-text
+        background-color: $color-blue-dark
+        grid-column: col-start 5 / full-end
+        padding: 0 3vw
+        //display: flex
+        //flex-direction: column
+        //justify-content: center
+        //align-items: flex-start
+        display: grid
+        align-content: center
+        justify-items: start
+        @include respond(tab-port)
+            grid-column: 1 / -1
+            grid-row: 5 / 6
+            padding: 4rem
+            justify-items: stretch
+        &__text
+            margin-bottom: 4rem
